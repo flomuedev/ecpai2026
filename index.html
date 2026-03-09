@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECPAI 2026 — Engineering Cross-Compatible Personalization for Interactive AI-Driven Services</title>
+  <meta name="description"
+    content="EICS 2026 Workshop on Engineering Cross-Compatible Personalization for Interactive AI-Driven Services. Full-day workshop bringing together HCI, AI/ML, and privacy researchers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">ECPAI<span class="accent">@EICS'26</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#topics">Topics</a></li>
+        <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#submit" class="nav-cta">Submit &rarr;</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">EICS 2026 Workshop &middot; Full-Day</div>
+      <h1 class="hero-title">
+        Engineering <span class="gradient-text">Cross-Compatible Personalization</span> for Interactive AI-Driven
+        Services
+      </h1>
+      <p class="hero-subtitle">
+        Bringing together researchers and practitioners from interactive systems engineering, HCI, AI/ML, and
+        security/privacy to shape the future of user-sovereign, negotiable personalization.
+      </p>
+      <div class="hero-actions">
+        <a href="#cfp" class="btn btn-primary">Call for Submissions</a>
+        <a href="files/workshop_proposal.pdf" class="btn btn-outline" target="_blank">Read the Proposal &darr;</a>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          <span>June 2026</span>
+        </div>
+        <div class="meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span>Co-located with EICS 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">About the Workshop</span>
+        <h2 class="section-title">Negotiable Personalization</h2>
+        <p class="section-desc">
+          AI-driven services continuously infer "models-of-users" to personalize content, automate decisions, and
+          optimize interaction. Yet, most user models remain opaque, fragmented across platforms, and hard to correct,
+          transfer, or revoke. We propose a vision for future interactive systems in which users can make their digital
+          self-representations <strong>inspectable</strong>, <strong>editable</strong>, and <strong>selectively
+            shareable</strong>.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card fade-in">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">User-Sovereign Representations</h3>
+          <p>Profiles as scoped, composable objects with explicit lifetimes, provenance, and revocation semantics — "at
+            work", "commuting", "anonymous browsing".</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Sandboxed Interaction Spaces</h3>
+          <p>Private, secure data spaces with interfaces that let users inspect what the system "believes", try changes
+            via what-if previews, and apply edits with predictable effects.</p>
+        </div>
+        <div class="pillar-card fade-in">
+          <div class="pillar-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 16 12 12 8 16" />
+              <line x1="12" y1="12" x2="12" y2="21" />
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Interoperable Protocols</h3>
+          <p>External services can request, negotiate, and verify only the necessary facets of a profile, enabling
+            portability without raw-data over-collection.</p>
+        </div>
+      </div>
+
+      <div class="about-preprint fade-in">
+        <a href="files/workshop_proposal.pdf" target="_blank" class="preprint-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+          <div>
+            <strong>Read the full workshop proposal</strong>
+            <span>Workshop proposal preprint (PDF)</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topics Section -->
+  <section class="section section-alt" id="topics">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Scope</span>
+        <h2 class="section-title">Topics of Interest</h2>
+      </div>
+      <div class="topics-grid">
+        <div class="topic-card fade-in">
+          <div class="topic-number">01</div>
+          <h4>User-Controlled Representations</h4>
+          <p>Schemas, modular profiles, local adapters for user-controlled personalization.</p>
+        </div>
+        <div class="topic-card fade-in">
+          <div class="topic-number">02</div>
+          <h4>Interaction Techniques</h4>
+          <p>Dashboards, timelines, profile composition tools, conversational negotiation for inspecting &amp; editing
+            user models.</p>
+        </div>
+        <div class="topic-card fade-in">
+          <div class="topic-number">03</div>
+          <h4>Negotiation &amp; Consent</h4>
+          <p>Time-boxing, selective disclosure, revocation, audit trails, and consent mechanisms.</p>
+        </div>
+        <div class="topic-card fade-in">
+          <div class="topic-number">04</div>
+          <h4>User-Side AI Architectures</h4>
+          <p>On-device and federated learning, privacy-preserving exchange.</p>
+        </div>
+        <div class="topic-card fade-in">
+          <div class="topic-number">05</div>
+          <h4>Verifiability &amp; Accountability</h4>
+          <p>Credentials, provenance, logging, evaluation of trust and UX.</p>
+        </div>
+        <div class="topic-card fade-in">
+          <div class="topic-number">06</div>
+          <h4>Empirical Methods</h4>
+          <p>Benchmarks for measuring agency, predictability, and utility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call for Papers Section -->
+  <section class="section" id="cfp">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Participate</span>
+        <h2 class="section-title">Call for Submissions</h2>
+        <p class="section-desc">We invite contributions from researchers and practitioners working on user-sovereign,
+          negotiable personalization in interactive AI-driven systems.</p>
+      </div>
+
+      <div class="cfp-grid">
+        <div class="cfp-card fade-in">
+          <div class="cfp-card-icon">📄</div>
+          <h3>Position Papers</h3>
+          <p>2–4 pages in ACM format (excl. references) describing research results, open problems, or system visions.
+          </p>
+        </div>
+        <div class="cfp-card fade-in">
+          <div class="cfp-card-icon">🛠️</div>
+          <h3>Artifact Sketches</h3>
+          <p>1 page describing an interface concept, protocol/API sketch, or architecture diagram.</p>
+        </div>
+        <div class="cfp-card fade-in">
+          <div class="cfp-card-icon">🎬</div>
+          <h3>Demo Material</h3>
+          <p>Optional short video or repository link to support discussion (accompanies any submission type).</p>
+        </div>
+      </div>
+
+      <div class="cfp-note fade-in">
+        All accepted contributions will be presented as <strong>lightning talks</strong> and discussed in
+        <strong>breakout sessions</strong>.
+        Authors of accepted papers will be invited to revise their submissions for inclusion in the <strong>joint LNCS
+          workshop volume</strong>.
+      </div>
+
+      <div class="timeline fade-in">
+        <h3 class="timeline-title">Important Dates</h3>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-date">25 April 2026</div>
+            <div class="timeline-label">Submission deadline</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2 May 2026</div>
+            <div class="timeline-label">Notification to authors</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">20 May 2026</div>
+            <div class="timeline-label">Camera-ready deadline</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="submit-cta fade-in" id="submit">
+        <a href="https://easychair.org/" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          Submit via EasyChair &rarr;
+        </a>
+        <p class="submit-hint">Submissions are handled via EasyChair.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section class="section section-alt" id="schedule">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Programme</span>
+        <h2 class="section-title">Workshop Schedule <span
+            style="font-size:0.5em;font-weight:400;color:var(--text-muted);">(preliminary)</span></h2>
+        <p class="section-desc">A full-day workshop combining paper discussion with collaborative engineering
+          activities.</p>
+      </div>
+
+      <div class="schedule-table-wrap fade-in">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-cell">09:00 – 09:15</td>
+              <td>Welcome, goals, and warm-up poll</td>
+            </tr>
+            <tr>
+              <td class="time-cell">09:15 – 09:45</td>
+              <td>Invited Provocation #1: <em>From Explanation to Negotiation</em></td>
+            </tr>
+            <tr>
+              <td class="time-cell">09:45 – 10:30</td>
+              <td>Lightning Talks I (5&nbsp;min each) + Structured Q&amp;A</td>
+            </tr>
+            <tr class="break-row">
+              <td class="time-cell">10:30 – 11:00</td>
+              <td>☕ Coffee break + poster-style mingling</td>
+            </tr>
+            <tr>
+              <td class="time-cell">11:00 – 11:30</td>
+              <td>Invited Provocation #2: <em>Interoperability &amp; Verifiable Exchange</em></td>
+            </tr>
+            <tr>
+              <td class="time-cell">11:30 – 12:00</td>
+              <td>Lightning Talks II + Discussion</td>
+            </tr>
+            <tr>
+              <td class="time-cell">12:00 – 12:30</td>
+              <td>Panel: <em>Rights, Accountability &amp; Governance</em></td>
+            </tr>
+            <tr class="break-row">
+              <td class="time-cell">12:30 – 13:30</td>
+              <td>🍽️ Lunch</td>
+            </tr>
+            <tr>
+              <td class="time-cell">13:30 – 14:15</td>
+              <td>Breakout Formation: three tracks (Interaction Patterns / Protocols / Architectures)</td>
+            </tr>
+            <tr>
+              <td class="time-cell">14:15 – 15:30</td>
+              <td>Breakout Work Session I — Produce first drafts of artifacts</td>
+            </tr>
+            <tr class="break-row">
+              <td class="time-cell">15:30 – 16:00</td>
+              <td>☕ Coffee break</td>
+            </tr>
+            <tr>
+              <td class="time-cell">16:00 – 16:45</td>
+              <td>Breakout Work Session II — Refine &amp; cross-review artifacts</td>
+            </tr>
+            <tr>
+              <td class="time-cell">16:45 – 17:30</td>
+              <td>Plenary Synthesis: merge outputs into shared roadmap</td>
+            </tr>
+            <tr>
+              <td class="time-cell">17:30 – 17:45</td>
+              <td>Closing: commitments, publication plan &amp; community channel</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizers Section -->
+  <section class="section" id="organizers">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Team</span>
+        <h2 class="section-title">Organizers</h2>
+      </div>
+
+      <div class="organizers-grid">
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/florian_mueller.jpg" alt="Florian Müller" loading="lazy" />
+          </div>
+          <h4>Florian Müller</h4>
+          <span class="organizer-affiliation">TU Darmstadt</span>
+          <p class="organizer-bio">Assistant Professor for Mobile HCI; works on mobile/XR interaction and human–AI
+            collaboration.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/andrii_matviienko.jpg" alt="Andrii Matviienko" loading="lazy" />
+          </div>
+          <h4>Andrii Matviienko</h4>
+          <span class="organizer-affiliation">KTH Royal Institute of Technology</span>
+          <p class="organizer-bio">Assistant Professor in HCI; researches interaction techniques and prototyping for XR
+            and context-aware systems.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/alessandro_bozzon.jpeg" alt="Alessandro Bozzon" loading="lazy" />
+          </div>
+          <h4>Alessandro Bozzon</h4>
+          <span class="organizer-affiliation">TU Delft</span>
+          <p class="organizer-bio">Professor of Human-Centered AI; expertise in user modelling, recommender systems, and
+            scalable personalization.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/carmen_santoro.jpg" alt="Carmen Santoro" loading="lazy" />
+          </div>
+          <h4>Carmen Santoro</h4>
+          <span class="organizer-affiliation">CNR-ISTI</span>
+          <p class="organizer-bio">Researcher with expertise in end-user development and interactive system engineering.
+          </p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/larbi_abdenebaoui.jpg" alt="Larbi Abdenebaoui" loading="lazy" />
+          </div>
+          <h4>Larbi Abdenebaoui</h4>
+          <span class="organizer-affiliation">OFFIS Institute for IT</span>
+          <p class="organizer-bio">Researcher at the intersection of HCI and AI, focusing on explainable AI and
+            value-driven design.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/andrea_lavazza.png" alt="Andrea Lavazza" loading="lazy" />
+          </div>
+          <h4>Andrea Lavazza</h4>
+          <span class="organizer-affiliation">Pegaso University</span>
+          <p class="organizer-bio">Associate Professor of Moral Philosophy and Neuroethics; researches AI ethics and
+            neurorights.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/andreas_komninos.jpg" alt="Andreas Komninos" loading="lazy" />
+          </div>
+          <h4>Andreas Komninos</h4>
+          <span class="organizer-affiliation">University of Patras</span>
+          <p class="organizer-bio">Assistant Professor focusing on mobile and pervasive interactive systems,
+            context-aware services and IoT.</p>
+        </div>
+        <div class="organizer-card fade-in">
+          <div class="organizer-img-wrap">
+            <img src="img/organizers/nicolas_sklavos.jpg" alt="Nicolas Sklavos" loading="lazy" />
+          </div>
+          <h4>Nicolas Sklavos</h4>
+          <span class="organizer-affiliation">University of Patras</span>
+          <p class="organizer-bio">Professor; expertise in cybersecurity, cryptography, hardware security, and embedded
+            systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">ECPAI<span class="accent">@EICS'26</span></span>
+          <p>Engineering Cross-Compatible Personalization for Interactive AI-Driven Services</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#cfp">Call for Papers</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#organizers">Organizers</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <a href="files/workshop_proposal.pdf" target="_blank">Workshop Proposal (PDF)</a>
+          <a href="https://easychair.org/" target="_blank" rel="noopener">Submit via EasyChair</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ECPAI Workshop &middot; Co-located with <a href="https://eics.acm.org/2026" target="_blank"
+            rel="noopener">ACM EICS 2026</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
