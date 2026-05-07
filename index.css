@@ -472,6 +472,11 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-md);
 }
 .cfp-note strong { color: var(--accent-3); }
+.cfp-note-warning {
+  border-left: 3px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  text-align: left;
+}
 
 /* ===== Timeline ===== */
 .timeline {
