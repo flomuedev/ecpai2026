@@ -668,6 +668,110 @@ img { max-width: 100%; display: block; }
   line-height: 1.55;
 }
 
+/* ===== Speaker cards (richer variant of organizer cards) ===== */
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* Align session boxes across cards: share row tracks via subgrid so the
+   photo / name / affiliation / bio rows are equal-height, making every
+   first session box start at the same y. Each card has exactly 5 children. */
+@supports (grid-template-rows: subgrid) {
+  .speakers-grid { align-items: start; }
+  .speakers-grid .speaker-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
+    row-gap: 0;
+    justify-items: center;
+  }
+  .speakers-grid .speaker-bio,
+  .speakers-grid .speaker-sessions {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
+.speaker-bio {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+/* Session blocks — each role badge heads its own block with title + abstract */
+.speaker-sessions {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+.speaker-session {
+  padding: 14px 16px;
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--accent-3);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+.speaker-session.is-panel { border-left-color: var(--accent-2); }
+.speaker-role {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(108, 92, 231, 0.16);
+  border: 1px solid var(--glass-border-hover);
+  color: var(--accent-2);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.speaker-role .speaker-time { color: var(--text-secondary); font-weight: 500; }
+/* Collapsible talk block */
+details.speaker-session > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.speaker-session > summary::-webkit-details-marker { display: none; }
+.speaker-summary-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+.speaker-talk-title {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.speaker-summary-row .speaker-talk-title { margin-top: 0; }
+details.speaker-session > summary:hover .speaker-talk-title { color: var(--accent-2); }
+.speaker-chevron {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--accent-2);
+  transition: transform 0.25s ease;
+}
+details.speaker-session[open] .speaker-chevron { transform: rotate(180deg); }
+.speaker-abstract {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.speaker-session-note {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--bg-secondary);
